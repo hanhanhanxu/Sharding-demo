@@ -117,7 +117,7 @@ start slave;
 
 4、执行：show slave status;
 
-把输出内容粘贴到记事本看起来方便，查看到两个Yes，就是正常的。
+把输出内容粘贴到记事本看起来方便，查看到两个Yes，就是正常的。（前者代表io-thread，后者代表sql-thread。都是yes代表都在运行）
 
 ![](https://minio.riun.xyz/riun1/2024-07-09_69OSJaSfky6qprUCLJ.jpg)
 
@@ -131,7 +131,7 @@ start slave;
 # 停止复制进程
 stop slave;
 
-# 清除从服务器上的复制信息和中继日志文件：
+# 清除服务器上的复制信息和中继日志文件：
 RESET SLAVE;
 
 # 如果存在中继日志文件，删除它们：
